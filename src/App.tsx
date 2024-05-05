@@ -5,10 +5,11 @@ function App() {
   return (
     <div className='main-layout'>
       <div className='card-layout'>
-        <JobCard />
-        <JobCard />
-        <JobCard />
-        <JobCard />
+        {new Array(10).fill(0).map((_, index) => (
+          <div key={index}>
+            <JobCard />
+          </div>
+        ))}
       </div>
     </div>
   )
