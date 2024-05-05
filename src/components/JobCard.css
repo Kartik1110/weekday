@@ -91,3 +91,70 @@
     margin-top: 8px;
     margin-bottom: 8px;
 }
+
+.job-about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+.job-about-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding: 8px;
+    padding-top: 0px;
+}
+
+.job-about-heading {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+}
+.job-about-p {
+    margin: 0;
+    font-size: 14px;
+}
+.job-about-view-btn {
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    align-items: center;
+    text-decoration-line: none;
+    color: rgb(73, 67, 218);
+}
+
+.job-card-footer {
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding: 8px;
+    padding-top: 10px;
+}
+.apply-button {
+    height: 44px;
+}
+.referral-button {
+    height: 44px;
+}
+.job-header-exp {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 8px;
+}
+.button-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    column-gap: 10px;
+}
