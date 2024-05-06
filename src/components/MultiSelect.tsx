@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { Input, IconButton, InputAdornment } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import ClearIcon from '@mui/icons-material/Clear';
 
@@ -66,10 +66,10 @@ type MutiSelectProps = {
 };
 
 export default function MultiSelect({ label }: MutiSelectProps) {
-    const [personName, setPersonName] = React.useState([]);
+    const [personName, setPersonName] = React.useState<string[] | []>([]);
 
-    const handleChange = (event) => {
-        setPersonName(event.target.value);
+    const handleChange = (event: SelectChangeEvent<unknown>) => {
+        setPersonName(event.target.value as string[]);
     };
 
     const handleClear = () => {
@@ -99,9 +99,9 @@ export default function MultiSelect({ label }: MutiSelectProps) {
                         }
                     />
                 }
-                renderValue={(selected) => (
+                renderValue={(selected: unknown) => (
                     <div>
-                        {selected.map((value) => (
+                        {(selected as string[]).map((value) => (
                             <Chip key={value} label={value} />
                         ))}
                     </div>
