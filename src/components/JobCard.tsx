@@ -16,12 +16,13 @@ export default function JobCard({ jobData }: { jobData: JobDetails }) {
     role: jobData.jobRole,
   }
 
+
   return (
     <div className="job-card">
       <JobCardHeaderChip />
       <JobCardHeader data={companyDetails} />
-      <JobBody aboutUs="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex illum sed architecto illo, laborum iusto at ea consequatur perferendis repudiandae voluptate molestias assumenda placeat laudantium facere magni temporibus consectetur fugiat. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex illum sed architecto illo, laborum iusto at ea consequatur perferendis repudiandae voluptate molestias assumenda placeat laudantium facere magni temporibus consectetur fugiat." />
-      <JobCardFooter />
+      <JobBody aboutUs={jobData.jobDetailsFromCompany} />
+      <JobCardFooter minExperience={jobData.minExp} />
     </div>
   )
 }
