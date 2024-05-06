@@ -16,9 +16,26 @@
     justify-items: center;
 }
 
+.app-layout {
+  padding-left: 160px;
+  padding-right: 260px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  /* grid-gap: 10px; */
+  justify-items: center;
+}
+
   
 @media (max-width: 768px) {
   .card-layout {
     grid-template-columns: 1fr;
+    justify-content: center;
   }
+
+  .app-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  
 }
