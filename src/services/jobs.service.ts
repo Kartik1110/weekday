@@ -4,15 +4,15 @@ import { API_ENDPOINTS } from "../constants/apiEndPointUrl";
  * Fetches data from the API endpoint.
  * @returns {Promise<any>} A promise that resolves to the fetched data.
  */
-export const fetchData = async () => {
+export const fetchData = async (limit: number, offset: number) => {
   const requestOptions = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      limit: 50,
-      offset: 0,
+      limit,
+      offset,
     }),
   };
 
